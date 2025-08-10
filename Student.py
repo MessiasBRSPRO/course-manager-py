@@ -17,3 +17,6 @@ class Student:
 
     def getMatriculedCourses(self):
         return self._matriculedCourses
+
+    def toString(self):
+        return f"id:{self._id}, name:{self._name}, averageGrade:{self._averageGrade}"
