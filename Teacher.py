@@ -1,6 +1,7 @@
 class Teacher:
 
-    def __init__(self, name, matter, graduation):
+    def __init__(self, id, name, matter, graduation):
+        self._id = id
         self._name = name;
         self._matters = matter;
         self._graduation = graduation;
@@ -8,6 +9,9 @@ class Teacher:
 
     def getName(self):
         return self._name
+
+    def getId(self):
+        return self._id
 
     def getMatter(self):
         return self._matters
