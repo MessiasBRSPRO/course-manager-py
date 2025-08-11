@@ -22,5 +22,14 @@ class Teacher:
     def getTeachCourses(self):
         return self._teachCourses
 
+    def __eq__(self, other):
+        #If two 2 objects are equals, the hash code are equals too
+        if not isinstance(other, Teacher):
+            return NotImplemented
+        return self._id == other._id
+
+    def __hash__(self):
+        return hash(self._id)
+
     def toString(self):
         return f"Teacher name:{self._name}, matters:{self._matters}, graduation description:{self._graduation}, teach Courses:{self._teachCourses}"
