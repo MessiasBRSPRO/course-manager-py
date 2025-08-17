@@ -1,3 +1,5 @@
+import Classes
+import Course
 class Teacher:
 
     def __init__(self, id, name, matter, graduation):
@@ -21,6 +23,12 @@ class Teacher:
 
     def getTeachCourses(self):
         return self._teachCourses
+
+    def addClassForCourse(self, course, classe):
+        if type(course) == Course.Course and type(classe) == Classes.Classes:
+            course._classes.append(classe.toString())
+        else:
+            print("the type are invalids")
 
     def __eq__(self, other):
         #If two 2 objects are equals, the hash code are equals too
