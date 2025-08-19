@@ -25,4 +25,4 @@ class Course:
         return self._students;
 
     def toString(self):
-        return f"Course:{self._courseName}, Classes:{self.getClasses()}, Teacher:{self._teacher.getName()}, Students:{self._students}"
+        return f"Course:{self._courseName},\nClasses:{self.getClasses()}, \nTeacher:{self._teacher.getName()}, \nStudents:{self._students}"
