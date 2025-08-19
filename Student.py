@@ -1,5 +1,4 @@
 class Student:
-
     def __init__(self, id, name):
         self._id = id
         if len(self._id) != 5:
@@ -20,6 +19,13 @@ class Student:
 
     def getMatriculedCourses(self):
         return self._matriculedCourses
+
+    def enrollInCourse(self, course):
+        #The student can enroll in a course of system
+        if self not in course._students:
+            return course._students.append(self);
+        else:
+            return None
 
     def __eq__(self, other):
         #If two 2 objects are equals, the hash code are equals too
